@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>CE Ariquemes Shop</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');body { font-family: 'Poppins', sans-serif; margin: 0; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #333; }
+
+header { background: linear-gradient(90deg, #ff8a00, #e52e71); color: white; padding: 25px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+
+header h1 { margin: 0; font-size: 32px; }
+
+header p { margin: 5px 0 0; font-size: 16px; }
+
+.container { max-width: 1200px; margin: auto; padding: 30px 20px; }
+
+.produtos { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+
+.produto { background: white; padding: 15px; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); transition: transform 0.3s, box-shadow 0.3s; }
+
+.produto:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.25); }
+
+.produto img { width: 100%; border-radius: 12px; }
+
+.produto h3 { margin: 10px 0 5px; font-size: 20px; }
+
+.produto p { color: #555; font-size: 14px; }
+
+.produto strong { color: #e52e71; font-size: 18px; }
+
+.produto button { background: linear-gradient(90deg, #25D366, #128C7E); color: white; border: none; padding: 12px; width: 100%; border-radius: 8px; cursor: pointer; font-size: 15px; font-weight: 600; margin-top: 10px; }
+
+.produto button:hover { opacity: 0.9; }
+
+footer { background: #111; color: #fff; text-align: center; padding: 15px; margin-top: 30px; font-size: 14px; }
+
+.botao-whatsapp { background: #25D366; color: white; border: none; padding: 14px 25px; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+
+.botao-whatsapp:hover { background: #1ebe5d; } </style>
+
+</head>
+<body><header>
+  <h1>CE Ariquemes Shop</h1>
+  <p>Diversos produtos com pagamento rápido via Pix</p>
+</header><div class="container">
+  <div style="margin-bottom:20px; text-align:center;">
+    <button onclick="enviarWhatsApp()" class="botao-whatsapp">
+      📲 Enviar comprovante no WhatsApp
+    </button>
+  </div>
+  <h2>Produtos em Destaque</h2>
+  <div class="produtos"><div class="produto">
+  <img src="https://via.placeholder.com/300" alt="Produto 1">
+  <h3>Produto 1</h3>
+  <p>Descrição curta do produto.</p>
+  <p><strong>R$ 99,90</strong></p>
+  <button onclick="mostrarPix()">Comprar com Pix</button>
+</div>
+
+<div class="produto">
+  <img src="https://via.placeholder.com/300" alt="Produto 2">
+  <h3>Produto 2</h3>
+  <p>Descrição curta do produto.</p>
+  <p><strong>R$ 149,90</strong></p>
+  <button onclick="mostrarPix()">Comprar com Pix</button>
+</div>
+
+<div class="produto">
+  <img src="https://via.placeholder.com/300" alt="Produto 3">
+  <h3>Produto 3</h3>
+  <p>Descrição curta do produto.</p>
+  <p><strong>R$ 79,90</strong></p>
+  <button onclick="mostrarPix()">Comprar com Pix</button>
+</div>
+
+  </div>
+</div><footer>
+  <p>© 2026 - CE Ariquemes Shop | Todos os direitos reservados</p>
+</footer><script>
+function mostrarPix() {
+  const chavePix = "05899352248";
+  const mensagem = `Pagamento via Pix
+
+Chave Pix: ${chavePix}
+
+Após o pagamento, envie o comprovante para confirmar sua compra.`;
+  alert(mensagem);
+}
+</script><script>
+function enviarWhatsApp() {
+  const numero = "5562994102706";
+  const mensagem = encodeURIComponent("Olá! Acabei de realizar um pagamento via Pix na CE Ariquemes Shop. Segue o comprovante para confirmação do meu pedido.");
+  const url = `https://wa.me/${numero}?text=${mensagem}`;
+  window.open(url, '_blank');
+}
+</script></body>
+    </html>
